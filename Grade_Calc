@@ -1,0 +1,64 @@
+using System;
+
+namespace IntroCS
+{
+	class MainnClass
+	{
+		public class EnterWeigts
+		{
+			static void Main ()
+			{
+				Console.WriteLine ("This will give you your grade.");
+				Console.WriteLine ("We will begin by entering your wait grades.");
+				Console.WriteLine ("Make sure that the weights entered equal 100.");
+				int a, b, c, d, e;
+				do {
+					a = UI.PromptInt ("Enter Exam weight: ");
+					b = UI.PromptInt ("Enter Labs weight: ");
+					c = UI.PromptInt ("Enter Homework weight: ");
+					d = UI.PromptInt ("Enter Project weight: ");
+					e = UI.PromptInt ("Enter Participation weight: ");
+					int zSum = a + b + c + d + e;
+					if (zSum != 100) {
+						Console.WriteLine ("Your total did not equal 100, please try again.");
+					}
+				} while	(a + b + c + d + e != 100);
+				{
+					double f, g, h, i, j;
+					Console.WriteLine (" ");
+					Console.WriteLine ("We will now enter exam grades.");
+					f = UI.PromptDouble ("Enter exam grade: ");
+					g = UI.PromptDouble ("Enter labs gradet: ");
+					h = UI.PromptDouble ("Enter homework grade: ");
+					i = UI.PromptDouble ("Enter project grade: ");
+					j = UI.PromptDouble ("Enter participation grade: ");
+					double grade = (a * f + b * g + c * h + d * i + e * j) / 100.0;
+					Console.WriteLine ("Your final grade is " + grade + ".");
+					if (grade >= 93) {
+						Console.WriteLine ("Your grade is an A");
+					} else if (grade >= 90) {
+						Console.WriteLine ("Your grade is an A-");
+					} else if (grade >= 87) {
+						Console.WriteLine ("Your grade is a B+");
+					} else if (grade >= 83) {
+						Console.WriteLine ("Your grade is a B");
+					} else if (grade >= 80) {
+						Console.WriteLine ("Your grade is a B-");
+					} else if (grade >= 77) {
+						Console.WriteLine ("Your grade is a C+");
+					} else if (grade >= 73) {
+						Console.WriteLine ("Your grade is a C");
+					} else if (grade >= 70) {
+						Console.WriteLine ("Your grade is a C-");
+					} else if (grade >= 67) {
+						Console.WriteLine ("Your grade is a D+");
+					} else if (grade >= 60) {
+						Console.WriteLine ("Your grade is a D");
+					} else {
+						Console.WriteLine ("Your grade is a F");
+					}
+				}
+				}
+		}
+	}
+}
